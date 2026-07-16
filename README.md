@@ -17,7 +17,8 @@ An interactive Sokoban puzzle solver that uses the A* search algorithm to automa
   * Expanded nodes
   * Maximum frontier size
 * Move counter and best score tracking
-* Customizable game appearance by replacing images in the `assets/` folder
+* Customizable game assets
+* Support for custom maps
 
 ## Technologies
 
@@ -47,7 +48,7 @@ pip install pygame
 python main.py
 ```
 
-Make sure `example_map.txt` and the `assets/` folder are located in the project directory before running the application.
+Make sure the `assets/` folder and a map file (default: `example_map.txt`) are located in the project directory before running the application.
 
 ## Controls
 
@@ -60,7 +61,9 @@ Make sure `example_map.txt` and the `assets/` folder are located in the project 
 
 ## Customization
 
-The game's appearance can be customized by replacing the image files inside the `assets/` folder while keeping their original filenames.
+### Game Assets
+
+Customize the game's appearance by replacing the image files inside the `assets/` folder while keeping their original filenames.
 
 Replaceable assets include:
 
@@ -71,10 +74,22 @@ Replaceable assets include:
 * `goal.png`
 * `wall.png`
 
+### Custom Maps
+
+You can create your own Sokoban maps by either:
+
+* Editing the contents of `example_map.txt`, or
+* Loading another map file by changing the file path in `main.py`:
+
+```python
+grid = load_map("your_map.txt")
+```
+
 ## Screenshots
 
-Add gameplay screenshots or GIFs here.
+<img width="698" height="587" alt="image" src="https://github.com/user-attachments/assets/0b9cd0ed-068c-4d1f-be6a-76a7a48f207b" />
+
 
 ## Author
 
-Vo Huynh Duy Tan
+**Vo Huynh Duy Tan**
