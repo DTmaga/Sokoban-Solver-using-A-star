@@ -341,7 +341,7 @@ class GameUI:
 # ================= MAIN =================
 def load_map(file):
     with open(file) as f:
-        return [list(line.strip()) for line in f]
+        return [list(line.rstrip('\r\n')) for line in f]
 
 if __name__ == "__main__":
     grid = load_map("example_map.txt")
